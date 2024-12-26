@@ -1,0 +1,230 @@
+/* * group css applications * */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+
+  --background1: linear-gradient(to bottom right, #ff4c68, #ef8172, #00bfff);
+  --background2: linear-gradient(
+    to bottom right,
+    #00bfff50,
+    #ef817250,
+    #ff4c6850
+  );
+  --background3: linear-gradient(to bottom right, #00bfff, #ef8172, #ff4c68);
+  --background-size: 200% 100%;
+  --animation: gradient-background 5s ease infinite;
+}
+
+@keyframes gradient-background {
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.gradient-background1 {
+  background: var(--background1);
+  background-size: var(--background-size);
+  animation: var(--animation);
+}
+
+.gradient-background2 {
+  background: var(--background2);
+  background-size: var(--background-size);
+  animation: var(--animation);
+}
+
+.gradient-background3 {
+  background: var(--background3);
+  background-size: var(--background-size);
+  animation: var(--animation);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* * individual css applications by section * */
+
+/* title section css */
+.title-container {
+  justify-content: space-evenly;
+  padding-bottom: 0;
+}
+
+.title-subtitle-button-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin: 100px 0;
+}
+
+.apple-button,
+.google-play-button {
+  height: 50px;
+  width: 182px;
+  margin: 10px 5px 0 0;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.apple-button:hover,
+.google-play-button:hover {
+  color: black;
+  background-color: white;
+}
+
+.apple-svg,
+.google-play-svg {
+  height: 20px;
+  width: 20px;
+}
+
+/* features section css */
+.features-container {
+  gap: 50px 10px;
+}
+
+.feature {
+  display: flex;
+}
+
+.feature svg {
+  width: 40px;
+  height: 40px;
+  margin: -4px 15px 0 0;
+}
+
+.feature p {
+  margin-top: 5px;
+}
+
+/* testimonials section css */
+.testimonials-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.interviewee-photo-and-name {
+  margin: 100px 0;
+}
+
+.interviewee-photo {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.interviewee-name {
+  margin-top: 25px;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px 10px;
+}
+
+.company-logo {
+  height: 50px;
+}
+
+/* pricing section css */
+.pricing-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.pricing-cards {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.pricing-card {
+  flex: 1;
+  border-radius: 10px;
+}
+
+.pricing-card-head {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
+.pricing-card-body {
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pricing-card-descriptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.sign-up-button {
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+/* footer section css */
+.footer-container {
+  gap: 50px 10px;
+}
+
+.footer-container ul {
+  font-size: 20px;
+  list-style: none;
+}
+
+.footer-container ul a {
+  color: black;
+  text-decoration: none;
+}
+
+/* * media query for responsiveness * */
+@media (max-width: 450px) {
+  .tindog-img {
+    width: 100%;
+  }
+}
