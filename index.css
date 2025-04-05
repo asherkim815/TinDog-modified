@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* * group css applications * */
 
 * {
@@ -7,8 +9,8 @@
 }
 
 :root {
-  font-family: 'Roboto', sans-serif;
   font-size: 22px;
+  font-family: 'Inter', sans-serif;
 
   --background1: linear-gradient(to bottom right, #ff4c68, #ef8172, #00bfff);
   --background2: linear-gradient(
@@ -56,6 +58,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 /* * individual css applications by section * */
