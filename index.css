@@ -12,16 +12,26 @@
   font-size: 22px;
   font-family: 'Inter', sans-serif;
 
-  --background1: linear-gradient(to bottom right, #ff4c68, #ef8172, #00bfff);
-  --background2: linear-gradient(
+  --background-image1: linear-gradient(
+    to bottom right,
+    #ff4c68,
+    #ef8172,
+    #00bfff
+  );
+  --background-image2: linear-gradient(
     to bottom right,
     #00bfff50,
     #ef817250,
     #ff4c6850
   );
-  --background3: linear-gradient(to bottom right, #00bfff, #ef8172, #ff4c68);
-  --background-size: 200% 100%;
-  --animation: gradient-background 5s ease infinite;
+  --background-image3: linear-gradient(
+    to bottom right,
+    #00bfff,
+    #ef8172,
+    #ff4c68
+  );
+  --background-size: 300% 100%;
+  --animation: gradient-background 5s infinite;
 }
 
 @keyframes gradient-background {
@@ -34,19 +44,19 @@
 }
 
 .gradient-background1 {
-  background: var(--background1);
+  background-image: var(--background-image1);
   background-size: var(--background-size);
   animation: var(--animation);
 }
 
 .gradient-background2 {
-  background: var(--background2);
+  background-image: var(--background-image2);
   background-size: var(--background-size);
   animation: var(--animation);
 }
 
 .gradient-background3 {
-  background: var(--background3);
+  background-image: var(--background-image3);
   background-size: var(--background-size);
   animation: var(--animation);
 }
