@@ -3,13 +3,13 @@
 /* * group css applications * */
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Inter', sans-serif;
 
   --background-image1: linear-gradient(
@@ -32,6 +32,8 @@
   );
   --background-size: 300% 100%;
   --animation: gradient-background 5s infinite;
+
+  --border-radius: 10px;
 }
 
 @keyframes gradient-background {
@@ -43,28 +45,10 @@
   }
 }
 
-.gradient-background1 {
-  background-image: var(--background-image1);
-  background-size: var(--background-size);
-  animation: var(--animation);
-}
-
-.gradient-background2 {
-  background-image: var(--background-image2);
-  background-size: var(--background-size);
-  animation: var(--animation);
-}
-
-.gradient-background3 {
-  background-image: var(--background-image3);
-  background-size: var(--background-size);
-  animation: var(--animation);
-}
-
 .container {
-  width: 80%;
   margin: auto;
   padding: 100px 0;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -74,176 +58,211 @@ h3 {
   font-weight: 500;
 }
 
-/* * individual css applications by section * */
+/* individual css applications by section */
 
 /* title section css */
-.title-container {
-  justify-content: space-evenly;
-  padding-bottom: 0;
+#title {
+  background-image: var(--background-image1);
+  background-size: var(--background-size);
+  animation: var(--animation);
 }
 
-.title-subtitle-button-div {
+.title-container {
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+.tindog-img {
+  margin-top: 100px;
+}
+
+.texts-and-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   margin: 100px 0;
 }
 
-.apple-button,
-.google-play-button {
-  height: 50px;
-  width: 182px;
-  margin: 10px 5px 0 0;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons > button {
+  padding: 10px;
   border: 1px solid white;
-  border-radius: 10px;
-  font-size: 22px;
-  color: white;
+  border-radius: var(--border-radius);
+  font-size: 20px;
   background-color: transparent;
+  color: white;
+  display: flex;
+  gap: 5px;
   cursor: pointer;
 }
 
-.apple-button:hover,
-.google-play-button:hover {
+.buttons > button:hover {
   color: black;
   background-color: white;
 }
 
-.apple-svg,
-.google-play-svg {
+svg {
   height: 20px;
   width: 20px;
 }
 
 /* features section css */
 .features-container {
-  gap: 50px 10px;
+  gap: 20px;
 }
 
 .feature {
   display: flex;
+  gap: 10px;
 }
 
-.feature svg {
-  width: 40px;
-  height: 40px;
-  margin: -4px 15px 0 0;
+.feature > svg {
+  width: 30px;
+  height: 30px;
 }
 
-.feature p {
-  margin-top: 5px;
+.feature h3 {
+  margin-bottom: 5px;
 }
 
 /* testimonials section css */
+#testimonials {
+  background-image: var(--background-image2);
+  background-size: var(--background-size);
+  animation: var(--animation);
+}
+
 .testimonials-container {
   flex-direction: column;
   text-align: center;
 }
 
-.interviewee-photo-and-name {
+.interviewee {
   margin: 100px 0;
 }
 
-.interviewee-photo {
+.interviewee > img {
+  margin-bottom: 25px;
   width: 200px;
   border-radius: 50%;
 }
 
-.interviewee-name {
-  margin-top: 25px;
-}
-
-.company-logos {
+.logos {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px 10px;
+  gap: 20px;
 }
 
-.company-logo {
+.logos > img {
   height: 50px;
 }
 
 /* pricing section css */
 .pricing-container {
   flex-direction: column;
+  gap: 100px;
   text-align: center;
 }
 
-.pricing-cards {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.pricing-card {
-  flex: 1;
-  border-radius: 10px;
-}
-
-.pricing-card-head {
-  height: 75px;
+.cards {
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 350px;
+}
+
+.card-head {
+  padding: 20px 0;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   background-color: black;
+  color: white;
 }
 
-.pricing-card-body {
-  height: 325px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+.card-body {
+  padding: 20px 0;
   border: 1px solid black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.pricing-card-descriptions {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3px;
+  align-items: center;
+  gap: 20px;
 }
 
-.sign-up-button {
-  height: 50px;
-  width: 220px;
+.card-descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sign-up {
+  padding: 10px 30px;
   border: none;
-  border-radius: 10px;
-  font-size: 22px;
-  color: white;
+  border-radius: var(--border-radius);
   background-color: black;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
+}
+
+/* for script (gradient background on button hover) */
+.gradient-background {
+  background-image: var(--background-image1);
+  background-size: var(--background-size);
+  animation: var(--animation);
 }
 
 /* footer section css */
 #footer {
   font-size: 18px;
+  background-image: var(--background-image3);
+  background-size: var(--background-size);
+  animation: var(--animation);
 }
 
 .footer-container {
-  gap: 50px 10px;
+  gap: 20px;
 }
 
-.footer-container ul {
+#footer ul {
   list-style: none;
 }
 
-.footer-container ul a {
+#footer a {
   color: black;
   text-decoration: none;
 }
 
-/* * media query for responsiveness * */
 @media (max-width: 450px) {
+  .container {
+    width: 90%;
+  }
+
   .tindog-img {
     width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 775px) {
+  .logos {
+    flex-direction: column;
+    align-items: center;
   }
 }
