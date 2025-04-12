@@ -46,7 +46,7 @@
 }
 
 .container {
-  margin: auto;
+  margin: 0 auto;
   padding: 100px 0;
   width: 80%;
   display: flex;
